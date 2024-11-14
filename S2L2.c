@@ -3,12 +3,12 @@
 int somma(int a, int b)
 {
     printf("\nLa somma %d + %d = %d\n", a, b, a + b);
-    return (0);
+    return (a+b);
 }
 int differenza(int a, int b)
 {
     printf("\nLa differenza %d - %d = %d\n", a, b, a - b);
-    return (0);
+    return (a-b);
 }
 int moltiplicazione(int a, int b)
 {
@@ -23,7 +23,7 @@ float divisione(int a, int b)
         return 0;
     }
     printf("\nLa divisione %d / %d = %1.2f\n", a, b, a / b);
-    return (0);
+    return (a/b);
 }
 float media(int a, int b)
 {
@@ -43,7 +43,7 @@ int main()
         scanf("%d", &a);
         printf("\nInserisci secondo numero= ");
         scanf("%d", &b);
-        esci=1;
+        esci = 1;
         while (esci != 0)
         {
             printf("\n1=somma\n2=differenza\n3=moltiplicazione\n4=divisione\n5=media\n0=esci\n");
@@ -72,14 +72,13 @@ int main()
                 printf("\nInserisci un numero valido\n");
                 break;
             }
-            
         }
-            printf("\n1=cambia numeri\n0=esci\n");
-            scanf("%d", &scelta);
-        if (scelta != 0 && scelta!= 1)
+        printf("\n1=cambia numeri\n0=esci\n");
+        scanf("%d", &scelta);
+        if (scelta != 0 && scelta != 1)
         {
             printf("\nInserisci numeri corretti\n");
-            scelta=0;
+            scelta = 0;
         }
     }
 
